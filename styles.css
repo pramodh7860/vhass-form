@@ -8,12 +8,12 @@
 }
 
 :root {
-  --primary-color: #1a1a1a;
-  --secondary-color: #2d2d2d;
-  --accent-color: #00ff88;
-  --text-color: #ffffff;
-  --text-light: #cccccc;
-  --text-dark: #000000;
+  --primary-color: #4a90e2;
+  --secondary-color: #f5f7fa;
+  --accent-color: #2c5282;
+  --text-color: #1a365d;
+  --text-light: #4a5568;
+  --text-dark: #2d3748;
   --extra-light: #f3f4f6;
   --white: #ffffff;
   --max-width: 1200px;
@@ -21,9 +21,20 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-color: var(--white);
   color: var(--text-color);
   scroll-behavior: smooth;
+  position: relative;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .section__container {
@@ -35,7 +46,7 @@ body {
 .btn {
   padding: 0.75rem 1.5rem;
   background-color: var(--accent-color);
-  color: var(--primary-color);
+  color: var(--white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -44,7 +55,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #00cc6a;
+  background-color: #1a365d;
   transform: translateY(-2px);
 }
 
@@ -62,9 +73,10 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: rgba(26, 26, 26, 0.95);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 1rem;
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav__header {
@@ -109,7 +121,8 @@ nav {
 .header__content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, var(--accent-color), #00cc6a);
+  color: var(--text-dark);
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -159,12 +172,13 @@ nav {
 }
 
 .course__card {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   border-radius: 10px;
   overflow: hidden;
   transition: 0.3s;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .course__card:hover {
@@ -207,12 +221,12 @@ nav {
 
 .course__category {
   background-color: var(--accent-color);
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .course__level {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--text-color);
+  background-color: rgba(44, 82, 130, 0.1);
+  color: var(--text-dark);
 }
 
 .course__content {
@@ -279,12 +293,13 @@ nav {
 }
 
 .module__card {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   padding: 2rem;
   border-radius: 10px;
   transition: 0.3s;
   text-align: left;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .module__card:hover {
@@ -340,11 +355,12 @@ nav {
 }
 
 .tool__card {
-  background-color: var(--secondary-color);
+  background-color: var(--white);
   padding: 1.5rem;
   border-radius: 10px;
   transition: 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .tool__card:hover {
@@ -420,16 +436,17 @@ nav {
 .form-group input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(44, 82, 130, 0.2);
   border-radius: 5px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
+  background-color: var(--white);
+  color: var(--text-dark);
   transition: 0.3s;
 }
 
 .form-group input:focus {
   border-color: var(--accent-color);
   outline: none;
+  box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.1);
 }
 
 #timer {
@@ -457,6 +474,7 @@ nav {
   background-color: var(--secondary-color);
   padding: 2rem 0;
   margin-top: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .footer__container {
@@ -486,7 +504,7 @@ nav {
 .footer__bar {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(44, 82, 130, 0.1);
   margin-top: 2rem;
   color: var(--text-light);
 }
@@ -537,5 +555,36 @@ nav {
 @media (max-width: 480px) {
   .tools__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+.ceh-header-banner {
+  position: relative;
+  background: url('assets/ceh-banner.webp') center center/cover no-repeat;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.ceh-header-banner .header__content,
+.ceh-header-banner .header__content h1,
+.ceh-header-banner .header__content p,
+.ceh-header-banner .header__features,
+.ceh-header-banner .feature,
+.ceh-header-banner .feature i,
+.ceh-header-banner .feature span {
+  color: #fff !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+@media (max-width: 768px) {
+  .ceh-header-banner {
+    min-height: 60vh;
+    height: 60vh;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 }

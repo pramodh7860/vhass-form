@@ -13,8 +13,10 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <title>CEH Training - Certified Ethical Hacker Course</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
   <body>
+    <div id="particles-js"></div>
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
@@ -34,7 +36,7 @@
       </div>
     </nav>
 
-    <header class="section__container header__container" id="home">
+    <header class="ceh-header-banner" id="home">
       <div class="header__content">
         <h1>Certified Ethical Hacker<br />(CEH) Training</h1>
         <p>
@@ -295,6 +297,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="main.js"></script>
     <script>
+    document.addEventListener('DOMContentLoaded', function() {
     // Additional modal handling specific to CEH page
     const enrollBtn = document.getElementById('enroll-btn');
     const enrollmentModal = document.getElementById('enrollmentModal');
@@ -403,6 +406,64 @@
         clearInterval(timerInterval);
       }
     };
+    });
+
+    particlesJS('particles-js', {
+      particles: {
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: '#4a90e2'
+        },
+        shape: {
+          type: 'circle'
+        },
+        opacity: {
+          value: 0.5,
+          random: false
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: '#4a90e2',
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: 'none',
+          random: false,
+          straight: false,
+          out_mode: 'out',
+          bounce: false
+        }
+      },
+      interactivity: {
+        detect_on: 'canvas',
+        events: {
+          onhover: {
+            enable: true,
+            mode: 'grab'
+          },
+          onclick: {
+            enable: true,
+            mode: 'push'
+          },
+          resize: true
+        }
+      },
+      retina_detect: true
+    });
     </script>
   </body>
 </html>
