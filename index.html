@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>VHASS - Professional Training Platform</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/b&w logo.png" alt="VHASS" class="logo" />
+          </a>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__content">
+        <h1>Welcome to VHASS</h1>
+        <p>
+          Empowering professionals with industry-leading certifications and training programs.
+          Choose from our wide range of courses designed to boost your career.
+        </p>
+        <div class="header__features">
+          <div class="feature">
+            <i class="ri-award-line"></i>
+            <span>Industry-Recognized Certifications</span>
+          </div>
+          <div class="feature">
+            <i class="ri-user-star-line"></i>
+            <span>Expert Instructors</span>
+          </div>
+          <div class="feature">
+            <i class="ri-computer-line"></i>
+            <span>Hands-on Training</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="courses" id="courses">
+      <div class="section__container courses__container">
+        <h2>Featured Courses</h2>
+        <div class="courses__grid">
+          <div class="course__card" onclick="window.location.href='ceh.html'">
+            <div class="course__image">
+              <img src="assets/ceh.jpg" alt="CEH Course" />
+              <div class="course__overlay">
+                <span class="course__category">Cybersecurity</span>
+                <span class="course__level">Advanced</span>
+              </div>
+            </div>
+            <div class="course__content">
+              <h3>Certified Ethical Hacker (CEH)</h3>
+              <p>Master ethical hacking techniques and become a certified security professional.</p>
+              <div class="course__meta">
+                <span><i class="ri-time-line"></i> 40 Hours</span>
+                <span><i class="ri-user-line"></i> 1000+ Students</span>
+              </div>
+              <div class="course__footer">
+                <span class="course__price">₹4999</span>
+                <button class="btn">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="course__card">
+            <div class="course__image">
+              <img src="assets/bug-bounty.png" alt="Bug Bounty Hunting" />
+              <div class="course__overlay">
+                <span class="course__category">Cybersecurity</span>
+                <span class="course__level">Intermediate</span>
+              </div>
+            </div>
+            <div class="course__content">
+              <h3>Bug Bounty Hunting</h3>
+              <p>Master the art of finding and reporting security vulnerabilities in web applications and earn rewards.</p>
+              <div class="course__meta">
+                <span><i class="ri-time-line"></i> 35 Hours</span>
+                <span><i class="ri-user-line"></i> 800+ Students</span>
+              </div>
+              <div class="course__footer">
+                <span class="course__price">₹3999</span>
+                <button class="btn">Coming Soon</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="course__card">
+            <div class="course__image">
+              <img src="assets/cyber-teen.webp" alt="Cybersecurity for Teenagers" />
+              <div class="course__overlay">
+                <span class="course__category">Cybersecurity</span>
+                <span class="course__level">Beginner</span>
+              </div>
+            </div>
+            <div class="course__content">
+              <h3>Cybersecurity for Teenagers</h3>
+              <p>Age-appropriate introduction to cybersecurity concepts, safe online practices, and ethical hacking basics.</p>
+              <div class="course__meta">
+                <span><i class="ri-time-line"></i> 25 Hours</span>
+                <span><i class="ri-user-line"></i> 500+ Students</span>
+              </div>
+              <div class="course__footer">
+                <span class="course__price">₹2999</span>
+                <button class="btn">Coming Soon</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" style="background: var(--text-dark); padding: 60px 0;">
+      <div class="section__container contact__container">
+        <h2 style="text-align:center; color: #fff; margin-bottom: 1rem;">Get in Touch</h2>
+        <p style="text-align:center; color: #e0e0e0; margin-bottom: 2.5rem;">We'd love to hear from you! Whether you have a question about our courses, need support, or just want to connect, our team is ready to help.</p>
+        <div class="contact__grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+          <div class="contact__info" style="flex: 1 1 260px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); padding: 32px 24px; min-width: 260px; max-width: 340px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+              <i class="ri-map-pin-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Address</div>
+                <div style="color: #e0e0e0;">123 Training Street, Tech City, TC 12345</div>
+              </div>
+            </div>
+            <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+              <i class="ri-mail-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Email</div>
+                <div style="color: #e0e0e0;">info@vhass.com</div>
+              </div>
+            </div>
+            <div class="contact__item" style="display: flex; align-items: flex-start;">
+              <i class="ri-phone-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Phone</div>
+                <div style="color: #e0e0e0;">+1 (555) 123-4567</div>
+              </div>
+            </div>
+          </div>
+          <form id="contactForm" class="contact__form" style="flex: 1 1 320px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px 24px; min-width: 300px; max-width: 400px; display: flex; flex-direction: column; gap: 18px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactName" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Name</label>
+              <input id="contactName" type="text" name="name" placeholder="Enter your name" required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; transition: all 0.3s ease;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactEmail" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Email</label>
+              <input id="contactEmail" type="email" name="email" placeholder="Enter your email" required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; transition: all 0.3s ease;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactMessage" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Message</label>
+              <textarea id="contactMessage" name="message" placeholder="Type your message here..." required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; min-height: 100px; transition: all 0.3s ease;"></textarea>
+            </div>
+            <button type="submit" class="btn" style="background: var(--primary-color); color: #fff; border: none; border-radius: 6px; padding: 12px 0; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.2s;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <img src="assets/b&w logo.png" alt="VHASS" class="footer__logo" style="width: 120px; height: auto;" />
+        <ul class="footer__socials">
+          <li>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 VHASS. All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

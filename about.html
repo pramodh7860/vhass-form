@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About VHASS Cybersecurity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* About Page Specific Styles */
+        .about {
+            padding: 20px;
+            background-color: var(--white);
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 0;
+            background: var(--primary-color-light);
+            margin-top: 80px;
+        }
+
+        .page-header h1 {
+            color: var(--text-dark);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .stats-section {
+            padding: 40px 0;
+            background: var(--white);
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .about-story {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-content h2 {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .about-image {
+            max-width: 100%;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .milestones {
+            padding: 60px 0;
+            background: var(--primary-color-light);
+        }
+
+        .section-title h2 {
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 30px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .timeline-date {
+            min-width: 100px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .timeline-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+        }
+
+        .team-section {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--primary-color-light);
+        }
+
+        .team-member h3 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .position {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member .bio {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color-dark);
+        }
+
+        .values-section {
+            padding: 60px 0;
+            background: var(--primary-color-light);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .value-card p {
+            color: var(--text-light);
+        }
+
+        .testimonials {
+            padding: 60px 0;
+            background: var(--white);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-top: 56.25%;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .testimonial-author {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .testimonial-author h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-author p {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .page-header {
+                margin-top: 60px;
+                padding: 40px 0;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-date {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="index.html">
+                    <img src="assets/b&w logo.png" alt="VHASS" class="logo" />
+                </a>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="about">
+        <!-- Header Section -->
+        <section class="page-header">
+            <div class="container">
+                <h1>About VHASS Cybersecurity</h1>
+                <p>Protecting digital frontiers through education and innovation</p>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Students Trained</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Expert Instructors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Courses Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Satisfaction Rate</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="about-story">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2023, VHASS Cybersecurity Pvt. Ltd. began as a small team of security professionals passionate about bridging the cybersecurity skills gap. Today, we've grown into a leading provider of cybersecurity education, serving thousands of students and professionals worldwide.</p>
+                    <p>Our mission is to empower individuals and organizations with the knowledge and skills needed to defend against evolving cyber threats. We believe that education is the most powerful tool in creating a more secure digital world.</p>
+                    <img src="assets/images/a1.png" alt="VHASS Team" class="about-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <div class="milestones">
+            <div class="section-title">
+                <h2>Our Milestones</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h3>Company Founded</h3>
+                        <p>VHASS Cybersecurity was established with a vision to revolutionize cybersecurity education</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <h3>Online Platform Launch</h3>
+                        <p>Introduced comprehensive e-learning platform with interactive labs</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>Online Platform Launch</h3>
+                        <p>Introduced comprehensive e-learning platform with interactive labs</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2028</div>
+                    <div class="timeline-content">
+                        <h3>Global Recognition</h3>
+                        <p>Awarded "Best Cybersecurity Education Provider" by Global Tech Awards</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <h2 style="text-align: center;">Meet Our Leadership</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="assets/images/founder.png" alt="Pagadala Hemanth Krishna Vardhan">
+                        <h3>Pagadala Hemanth Krishna Vardhan</h3>
+                        <p class="position">Founder & CEO</p>
+                        <p class="bio">Cybersecurity expert with years of experience in ethical hacking and penetration testing</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/hemanth-krishna-vardhan-pagadala-a796aa339/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hemanthkrishnavardhan.official" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="assets/images/coo.png" alt="Uday Venkat Charkanam">
+                        <h3>Uday Venkat Charkanam</h3>
+                        <p class="position">Ethical Hacker & COO</p>
+                        <p class="bio">Security architect specializing in cloud security and threat intelligence</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/uday-venkat-22274131a/" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/hemanthkrishnavardhan.official" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="section-title">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-shield-alt value-icon"></i>
+                    <h3>Security First</h3>
+                    <p>We prioritize security in everything we do, setting the standard for our students.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb value-icon"></i>
+                    <h3>Innovation</h3>
+                    <p>We continuously evolve our methods to stay ahead of emerging threats.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users value-icon"></i>
+                    <h3>Community</h3>
+                    <p>We foster a supportive learning community for cybersecurity professionals.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-graduation-cap value-icon"></i>
+                    <h3>Excellence</h3>
+                    <p>We maintain the highest standards in our training and certifications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>What Our Students Say</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/s1.png">
+                                <source src="assets/videos/s1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Himavanth Singh</h4>
+                            <p>SRM AP STUDENT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/s2.png">
+                                <source src="assets/videos/s2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>RAGHAVENDRA</h4>
+                            <p>SRM AP STUDENT</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="video-wrapper">
+                            <video controls poster="assets/images/s3.png">
+                                <source src="assets/videos/s3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>RISHI</h4>
+                            <p>FREELANCER</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact" style="background: var(--primary-color-light); padding: 60px 0;">
+            <div class="section__container contact__container" style="max-width: 900px; margin: 0 auto;">
+                <h2 style="text-align:center; color: var(--text-dark); margin-bottom: 1rem;">Get in Touch</h2>
+                <p style="text-align:center; color: var(--text-light); margin-bottom: 2.5rem;">We'd love to hear from you! Whether you have a question about our courses, need support, or just want to connect, our team is ready to help.</p>
+                <div class="contact__grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+                    <div class="contact__info" style="flex: 1 1 260px; background: var(--white); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px 24px; min-width: 260px; max-width: 340px;">
+                        <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+                            <i class="ri-map-pin-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-dark);">Address</div>
+                                <div style="color: var(--text-light);">123 Training Street, Tech City, TC 12345</div>
+                            </div>
+                        </div>
+                        <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+                            <i class="ri-mail-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-dark);">Email</div>
+                                <div style="color: var(--text-light);">info@vhass.com</div>
+                            </div>
+                        </div>
+                        <div class="contact__item" style="display: flex; align-items: flex-start;">
+                            <i class="ri-phone-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-dark);">Phone</div>
+                                <div style="color: var(--text-light);">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" style="flex: 1 1 320px; background: var(--white); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px 24px; min-width: 300px; max-width: 400px; display: flex; flex-direction: column; gap: 18px;">
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="name" style="color: var(--text-dark); font-weight: 500; margin-bottom: 6px;">Your Name</label>
+                            <input id="name" type="text" placeholder="Enter your name" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px; outline: none;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="email" style="color: var(--text-dark); font-weight: 500; margin-bottom: 6px;">Your Email</label>
+                            <input id="email" type="email" placeholder="Enter your email" required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px; outline: none;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column;">
+                            <label for="message" style="color: var(--text-dark); font-weight: 500; margin-bottom: 6px;">Your Message</label>
+                            <textarea id="message" placeholder="Type your message here..." required style="padding: 12px; border: 1px solid #e0e0e0; border-radius: 6px; outline: none; min-height: 100px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="background: var(--primary-color); color: #fff; border: none; border-radius: 6px; padding: 12px 0; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.2s;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="section__container footer__container">
+            <img src="assets/b&w logo.png" alt="VHASS" class="footer__logo" style="width: 120px; height: auto;" />
+            <ul class="footer__socials">
+                <li>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="ri-instagram-fill"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2024 VHASS. All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+</body>
+</html> 

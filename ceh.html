@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CEH Training - Certified Ethical Hacker Course</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">
+            <img src="assets/b&w logo.png" alt="VHASS" class="logo" />
+          </a>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#tools">Tools</a></li>
+          <li><button class="btn" id="enroll-btn">Enroll Now</button></li>
+        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__content">
+        <h1>Certified Ethical Hacker<br />(CEH) Training</h1>
+        <p>
+          Master the art of ethical hacking with our comprehensive CEH course. 
+          Learn to think and act like a hacker – ethically. Perfect for beginners 
+          and professionals alike.
+        </p>
+        <div class="header__features">
+          <div class="feature">
+            <i class="ri-shield-check-line"></i>
+            <span>Industry-Recognized Certification</span>
+          </div>
+          <div class="feature">
+            <i class="ri-computer-line"></i>
+            <span>Hands-on Labs</span>
+          </div>
+          <div class="feature">
+            <i class="ri-user-line"></i>
+            <span>Beginner Friendly</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="modules" id="modules">
+      <div class="section__container modules__container">
+        <h2>Course Modules</h2>
+        <div class="modules__grid">
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-shield-keyhole-line"></i>
+            </div>
+            <h3>Module 1: Introduction to Ethical Hacking</h3>
+            <ul>
+              <li>Information security overview</li>
+              <li>Five phases of ethical hacking</li>
+              <li>Legal and regulatory aspects</li>
+              <li>CEH Scanning Lab</li>
+            </ul>
+          </div>
+
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-search-line"></i>
+            </div>
+            <h3>Module 2: Footprinting and Reconnaissance</h3>
+            <ul>
+              <li>Active vs. Passive Reconnaissance</li>
+              <li>OSINT techniques</li>
+              <li>WHOIS, DNS, email analysis</li>
+              <li>Social media intelligence</li>
+            </ul>
+          </div>
+
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-radar-line"></i>
+            </div>
+            <h3>Module 3: Scanning Networks</h3>
+            <ul>
+              <li>Network scanning techniques</li>
+              <li>Vulnerability scanning</li>
+              <li>Firewall analysis</li>
+              <li>Advanced port scanning</li>
+            </ul>
+          </div>
+
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-database-2-line"></i>
+            </div>
+            <h3>Module 4: Enumeration</h3>
+            <ul>
+              <li>User and group enumeration</li>
+              <li>SMB and NetBIOS analysis</li>
+              <li>SNMP and LDAP enumeration</li>
+              <li>NFS enumeration techniques</li>
+            </ul>
+          </div>
+
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-bug-line"></i>
+            </div>
+            <h3>Module 5: Vulnerability Analysis</h3>
+            <ul>
+              <li>Vulnerability identification</li>
+              <li>CVE database usage</li>
+              <li>Risk assessment</li>
+              <li>Vulnerability prioritization</li>
+            </ul>
+          </div>
+
+          <div class="module__card">
+            <div class="module__icon">
+              <i class="ri-lock-unlock-line"></i>
+            </div>
+            <h3>Module 6: System Hacking</h3>
+            <ul>
+              <li>Access gaining techniques</li>
+              <li>Privilege escalation</li>
+              <li>Password cracking</li>
+              <li>Log manipulation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" id="tools">
+      <div class="section__container tools__container">
+        <h2>Key Tools You'll Master</h2>
+        <div class="tools__grid">
+          <div class="tool__card">
+            <h4>Nmap</h4>
+            <p>Network scanning and security auditing</p>
+          </div>
+          <div class="tool__card">
+            <h4>Metasploit</h4>
+            <p>Penetration testing framework</p>
+          </div>
+          <div class="tool__card">
+            <h4>Wireshark</h4>
+            <p>Network protocol analyzer</p>
+          </div>
+          <div class="tool__card">
+            <h4>Burp Suite</h4>
+            <p>Web application security testing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enrollment Modal (hidden by default) -->
+    <div id="enrollmentModal" class="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+      <div class="modal-content" style="background:#fff; border-radius:10px; max-width:400px; margin:40px auto; padding:32px 24px; position:relative; max-height:80vh; overflow-y:auto;">
+        <span class="close" id="closeModal" style="position:absolute; top:10px; right:20px; font-size:2rem; cursor:pointer;">&times;</span>
+        <!-- Step 1: QR code and payment instructions -->
+        <div id="qrStep">
+          <div style="text-align:center; margin-bottom:1.5rem;">
+            <h3>Scan & Pay</h3>
+            <img id="qrImage" src="assets/vhass qr.jpg" alt="Payment QR Code" style="max-width:200px; margin:1rem auto; display:block;" />
+            <p style="color:#333; margin-top:1rem;">UPI ID: <b>vhassoftwarespvtltd@sbi</b></p>
+            <p style="color:#333;">After payment, click Success to enter your details and payment ID.<br>Or click Refresh to reload the QR code.</p>
+          </div>
+          <div style="display:flex; justify-content:center; gap:1rem;">
+            <button id="successBtn" class="btn">Success</button>
+            <button id="refreshBtn" class="btn" style="background:#e0e0e0; color:#222;">Refresh</button>
+          </div>
+        </div>
+        <!-- Step 2: Registration Form (hidden initially) -->
+        <form id="cehForm" action="https://formspree.io/f/xpwdvalq" method="POST" style="display:none;">
+          <input type="hidden" name="courseName" value="CEH Training">
+          <input type="hidden" name="coursePrice" value="4999">
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <input type="text" id="occupation" name="occupation" required>
+          </div>
+          <div class="form-group">
+            <label for="paymentId">Payment ID:</label>
+            <input type="text" id="paymentId" name="paymentId" required>
+          </div>
+          <button type="submit" class="btn">Submit Registration</button>
+        </form>
+        <div id="thankYou" style="display:none; color:green; font-weight:bold; margin-top:1rem;">
+          Thank you for registering! We have received your details.
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <img src="assets/b&w logo.png" alt="VHASS" class="footer__logo" style="width: 120px; height: auto;" />
+        <ul class="footer__socials">
+          <li>
+            <a href="https://www.instagram.com/vhass_software/" target="_blank"><i class="ri-instagram-fill"></i></a>
+          </li>
+          <li>
+            <a href="mailto:info@vhass.in"><i class="ri-mail-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-linkedin-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-github-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 VHASS. All rights reserved
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+    // Additional modal handling specific to CEH page
+    const qrStep = document.getElementById('qrStep');
+    const cehForm = document.getElementById('cehForm');
+    const thankYou = document.getElementById('thankYou');
+    const successBtn = document.getElementById('successBtn');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const qrImage = document.getElementById('qrImage');
+
+    // Handle Success button click
+    if (successBtn && cehForm && qrStep) {
+      successBtn.onclick = function() {
+        qrStep.style.display = 'none';
+        cehForm.style.display = 'block';
+        thankYou.style.display = 'none';
+        cehForm.scrollIntoView({behavior: 'smooth'});
+      };
+    }
+
+    // Handle Refresh button click
+    if (refreshBtn && qrImage) {
+      refreshBtn.onclick = function() {
+        qrImage.style.display = 'none';
+        setTimeout(() => {
+          qrImage.style.display = 'block';
+        }, 1000); // Hide for 1 second, then show again
+      };
+    }
+
+    // Handle form submission
+    if (cehForm) {
+      cehForm.onsubmit = function(e) {
+        e.preventDefault();
+        const form = this;
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            form.style.display = 'none';
+            thankYou.style.display = 'block';
+          } else {
+            alert('There was a problem submitting your registration.');
+          }
+        }).catch(error => {
+          console.error('Error:', error);
+          alert('There was a problem submitting your registration.');
+        });
+      };
+    }
+    </script>
+  </body>
+</html>
