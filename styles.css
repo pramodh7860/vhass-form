@@ -580,6 +580,17 @@ nav {
   color: #fff !important;
   text-shadow: 0 2px 16px rgba(0,0,0,0.35);
 }
+.ceh-header-banner .header__content h1 {
+  color: #fff !important;
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
+}
+.ceh-header-banner .header__content p {
+  color: #FFFFF0 !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
 @media (max-width: 768px) {
   .ceh-header-banner {
     min-height: 60vh;
