@@ -179,6 +179,7 @@
             <img id="qrImage" src="assets/vhass qr.jpg" alt="Payment QR Code" style="max-width:200px; margin:1rem auto; display:block;" />
             <p style="color:#333; margin-top:1rem;">UPI ID: <b>vhassoftwarespvtltd@sbi</b></p>
             <p style="color:#333;">After payment, click Success to enter your details and payment ID.<br>Or click Refresh to reload the QR code.</p>
+            <div id="timer" style="margin-top: 1rem; font-size: 1.2em; color: #333; font-weight: bold;">Time remaining: 3:00</div>
           </div>
           <div style="display:flex; justify-content:center; gap:1rem;">
             <button id="successBtn" class="btn">Success</button>
@@ -221,21 +222,66 @@
       </div>
     </div>
 
+    <!-- Contact Section -->
+    <section class="contact" id="contact" style="background: var(--text-dark); padding: 60px 0;">
+      <div class="section__container contact__container">
+        <h2 style="text-align:center; color: #fff; margin-bottom: 1rem;">Get in Touch</h2>
+        <p style="text-align:center; color: #e0e0e0; margin-bottom: 2.5rem;">We'd love to hear from you! Whether you have a question about our courses, need support, or just want to connect, our team is ready to help.</p>
+        <div class="contact__grid" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+          <div class="contact__info" style="flex: 1 1 260px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); padding: 32px 24px; min-width: 260px; max-width: 340px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+              <i class="ri-map-pin-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Address</div>
+                <div style="color: #e0e0e0;">Guntur, Andhra Pradesh, India</div>
+              </div>
+            </div>
+            <div class="contact__item" style="display: flex; align-items: flex-start; margin-bottom: 24px;">
+              <i class="ri-mail-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Email</div>
+                <div style="color: #e0e0e0;">vhass0310@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact__item" style="display: flex; align-items: flex-start;">
+              <i class="ri-phone-line" style="font-size: 1.5em; color: var(--primary-color); margin-right: 16px;"></i>
+              <div>
+                <div style="font-weight: 600; color: #fff;">Phone</div>
+                <div style="color: #e0e0e0;">+91 9182890236</div>
+              </div>
+            </div>
+          </div>
+          <form id="contactForm" class="contact__form" style="flex: 1 1 320px; background: rgba(255, 255, 255, 0.05); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 32px 24px; min-width: 300px; max-width: 400px; display: flex; flex-direction: column; gap: 18px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactName" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Name</label>
+              <input id="contactName" type="text" name="name" placeholder="Enter your name" required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; transition: all 0.3s ease;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactEmail" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Email</label>
+              <input id="contactEmail" type="email" name="email" placeholder="Enter your email" required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; transition: all 0.3s ease;">
+            </div>
+            <div class="form-group" style="display: flex; flex-direction: column;">
+              <label for="contactMessage" style="color: #fff; font-weight: 500; margin-bottom: 6px;">Your Message</label>
+              <textarea id="contactMessage" name="message" placeholder="Type your message here..." required style="padding: 12px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; outline: none; color: #fff; min-height: 100px; transition: all 0.3s ease;"></textarea>
+            </div>
+            <button type="submit" class="btn" style="background: var(--primary-color); color: #fff; border: none; border-radius: 6px; padding: 12px 0; font-size: 1.1em; font-weight: 600; cursor: pointer; transition: background 0.2s;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="section__container footer__container">
         <img src="assets/b&w logo.png" alt="VHASS" class="footer__logo" style="width: 120px; height: auto;" />
         <ul class="footer__socials">
           <li>
-            <a href="https://www.instagram.com/vhass_software/" target="_blank"><i class="ri-instagram-fill"></i></a>
+            <a href="https://www.instagram.com/vhass_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="ri-instagram-fill"></i></a>
           </li>
           <li>
-            <a href="mailto:info@vhass.in"><i class="ri-mail-fill"></i></a>
+            <a href="https://www.youtube.com/@Vhass-d6g" target="_blank"><i class="ri-youtube-fill"></i></a>
           </li>
           <li>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-github-fill"></i></a>
+            <a href="https://www.linkedin.com/company/vhass-softwares-private-limited/" target="_blank"><i class="ri-linkedin-fill"></i></a>
           </li>
         </ul>
       </div>
@@ -250,6 +296,9 @@
     <script src="main.js"></script>
     <script>
     // Additional modal handling specific to CEH page
+    const enrollBtn = document.getElementById('enroll-btn');
+    const enrollmentModal = document.getElementById('enrollmentModal');
+    const closeModal = document.getElementById('closeModal');
     const qrStep = document.getElementById('qrStep');
     const cehForm = document.getElementById('cehForm');
     const thankYou = document.getElementById('thankYou');
@@ -299,6 +348,61 @@
         });
       };
     }
+
+    // Timer functionality
+    let timeLeft = 180; // 3 minutes in seconds
+    let timerInterval;
+
+    function startTimer() {
+      const timerDisplay = document.getElementById('timer');
+      timerInterval = setInterval(() => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `Time remaining: ${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        if (timeLeft <= 0) {
+          clearInterval(timerInterval);
+          // Refresh QR code
+          const qrImage = document.getElementById('qrImage');
+          qrImage.style.display = 'none';
+          setTimeout(() => {
+            qrImage.style.display = 'block';
+            timeLeft = 180; // Reset timer
+            startTimer(); // Restart timer
+          }, 1000);
+        }
+        timeLeft--;
+      }, 1000);
+    }
+
+    // Start timer when modal opens
+    if (enrollBtn && enrollmentModal) {
+      enrollBtn.onclick = function() {
+        enrollmentModal.style.display = 'flex';
+        qrStep.style.display = 'block';
+        cehForm.style.display = 'none';
+        thankYou.style.display = 'none';
+        cehForm.reset();
+        timeLeft = 180; // Reset timer
+        startTimer(); // Start timer
+      };
+    }
+
+    // Clear timer when modal closes
+    if (closeModal) {
+      closeModal.onclick = function() {
+        enrollmentModal.style.display = 'none';
+        clearInterval(timerInterval);
+      };
+    }
+
+    // Clear timer when clicking outside
+    window.onclick = function(event) {
+      if (event.target === enrollmentModal) {
+        enrollmentModal.style.display = 'none';
+        clearInterval(timerInterval);
+      }
+    };
     </script>
   </body>
 </html>
