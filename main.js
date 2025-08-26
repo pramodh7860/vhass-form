@@ -4,12 +4,17 @@ const navLinks = document.querySelector('.nav__links');
 
 menuBtn.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  // Prevent body scroll when menu is open on mobile
+  if (window.innerWidth <= 768) {
+    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+  }
 });
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
   if (!e.target.closest('.nav__menu__btn') && !e.target.closest('.nav__links')) {
     navLinks.classList.remove('open');
+    document.body.style.overflow = '';
   }
 });
 
@@ -24,6 +29,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         block: 'start'
       });
       navLinks.classList.remove('open');
+      document.body.style.overflow = '';
     }
   });
 });
