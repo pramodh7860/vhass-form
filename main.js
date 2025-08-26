@@ -2,13 +2,40 @@
 const menuBtn = document.querySelector('.nav__menu__btn');
 const navLinks = document.querySelector('.nav__links');
 
-menuBtn.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  // Prevent body scroll when menu is open on mobile
-  if (window.innerWidth <= 768) {
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
-  }
-});
+// Debug: Check if elements are found
+console.log('Menu button:', menuBtn);
+console.log('Nav links:', navLinks);
+
+// Ensure menu button exists and add click handler
+if (menuBtn && navLinks) {
+  // Click event
+  menuBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Menu button clicked!');
+    navLinks.classList.toggle('open');
+    console.log('Menu open state:', navLinks.classList.contains('open'));
+    // Prevent body scroll when menu is open on mobile
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+  });
+
+  // Touch event for mobile
+  menuBtn.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Menu button touched!');
+    navLinks.classList.toggle('open');
+    console.log('Menu open state:', navLinks.classList.contains('open'));
+    // Prevent body scroll when menu is open on mobile
+    if (window.innerWidth <= 768) {
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+  });
+} else {
+  console.error('Menu elements not found!');
+}
 
 // Close menu when clicking outside
 document.addEventListener('click', (e) => {
